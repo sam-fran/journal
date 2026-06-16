@@ -1,5 +1,5 @@
 <script>
-    import { onMount } from 'svelte';
+    import { onMount } from "svelte";
 
     let entriesArray = $state([]);
 
@@ -11,9 +11,17 @@
 
 <h1 class="text-5xl">Home</h1>
 <hr class="pb-4" />
-<h2 class="text-4xl">Previous Entries</h2>
+{#if entriesArray.length > 0}
+    <h2 class="text-4xl">Entries</h2>
+{:else}
+    <h2 class="text-3xl">No Entries Yet. Write Some!</h2>
+{/if}
 <ul>
     {#each entriesArray as entry}
-        <li class="rounded-2xl mt-10 bg-gray-200 dark:bg-gray-800 dark:text-amber-100 p-7 text-xl w-full">{entry}</li>
+        <li
+            class="rounded-2xl mt-10 bg-gray-200 dark:bg-gray-800 dark:text-amber-100 p-7 text-xl w-full"
+        >
+            {entry}
+        </li>
     {/each}
 </ul>

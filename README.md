@@ -1,2 +1,2 @@
 # Journal
-A svelte tailwind journal app. This took like 1.5 hours!
+A svelte tailwind journal app. This took like one and a half hours!
